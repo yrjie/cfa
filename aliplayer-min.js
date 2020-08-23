@@ -37,7 +37,7 @@
                     var t;
                     return i.prototype = e,
                     t = new i,
-                    i.prototype = null ,
+                    i.prototype = null,
                     t
                 }
             }(),
@@ -71,7 +71,7 @@
             d = t.WordArray = r.extend({
                 init: function(e, t) {
                     e = this.words = e || [],
-                    this.sigBytes = null  != t ? t : 4 * e.length
+                    this.sigBytes = null != t ? t : 4 * e.length
                 },
                 toString: function(e) {
                     return (e || o).stringify(this)
@@ -114,8 +114,7 @@
                             return e /= 4294967296,
                             (e += .5) * (.5 < u.random() ? 1 : -1)
                         }
-                    }
-                    , n = 0; n < e; n += 4) {
+                    }, n = 0; n < e; n += 4) {
                         var o = r(4294967296 * (t || u.random()));
                         t = 987654071 * o(),
                         i.push(4294967296 * o() | 0)
@@ -435,7 +434,7 @@
                 if (e = e || {},
                 this.trackingClick = !1,
                 this.trackingClickStart = 0,
-                this.targetElement = null ,
+                this.targetElement = null,
                 this.touchStartX = 0,
                 this.touchStartY = 0,
                 this.lastTouchIdentifier = 0,
@@ -471,7 +470,7 @@
                     n.addEventListener("click", function(e) {
                         t(e)
                     }, !1),
-                    n.onclick = null )
+                    n.onclick = null)
                 }
                 function a(e, t) {
                     return function() {
@@ -531,7 +530,7 @@
                 var i, r;
                 document.activeElement && document.activeElement !== e && document.activeElement.blur(),
                 r = t.changedTouches[0],
-                (i = document.createEvent("MouseEvents")).initMouseEvent(this.determineEventType(e), !0, !0, window, 1, r.screenX, r.screenY, r.clientX, r.clientY, !1, !1, !1, !1, 0, null ),
+                (i = document.createEvent("MouseEvents")).initMouseEvent(this.determineEventType(e), !0, !0, window, 1, r.screenX, r.screenY, r.clientX, r.clientY, !1, !1, !1, !1, 0, null),
                 i.forwardedTouchEvent = !0,
                 e.dispatchEvent(i)
             }
@@ -600,7 +599,7 @@
             ,
             s.prototype.onTouchMove = function(e) {
                 return this.trackingClick && (this.targetElement !== this.getTargetElementFromEventTarget(e.target) || this.touchHasMoved(e)) && (this.trackingClick = !1,
-                this.targetElement = null ),
+                this.targetElement = null),
                 !0
             }
             ,
@@ -631,9 +630,9 @@
                         a = t
                     }
                 } else if (this.needsFocus(a))
-                    return 100 < e.timeStamp - i || c && window.top !== window && "input" === r ? this.targetElement = null  : (this.focus(a),
+                    return 100 < e.timeStamp - i || c && window.top !== window && "input" === r ? this.targetElement = null : (this.focus(a),
                     this.sendClick(a, e),
-                    c && "select" === r || (this.targetElement = null ,
+                    c && "select" === r || (this.targetElement = null,
                     e.preventDefault())),
                     !1;
                 return !(!c || u || !(n = a.fastClickScrollParent) || n.fastClickLastScrollTop === n.scrollTop) || (this.needsClick(a) || (e.preventDefault(),
@@ -643,7 +642,7 @@
             ,
             s.prototype.onTouchCancel = function() {
                 this.trackingClick = !1,
-                this.targetElement = null 
+                this.targetElement = null
             }
             ,
             s.prototype.onMouse = function(e) {
@@ -655,8 +654,8 @@
             ,
             s.prototype.onClick = function(e) {
                 var t;
-                return this.trackingClick ? (this.targetElement = null ,
-                !(this.trackingClick = !1)) : "submit" === e.target.type && 0 === e.detail || ((t = this.onMouse(e)) || (this.targetElement = null ),
+                return this.trackingClick ? (this.targetElement = null,
+                !(this.trackingClick = !1)) : "submit" === e.target.type && 0 === e.detail || ((t = this.onMouse(e)) || (this.targetElement = null),
                 t)
             }
             ,
@@ -1106,8 +1105,7 @@
           , n = function(e, t) {
             return e.useH5Prism = !0,
             r.create(e, t)
-        }
-        ;
+        };
         e("./lib/componentutil").register(n);
         var o = window.Aliplayer = n;
         n.players = {},
@@ -1153,14 +1151,13 @@
         ,
         o.prototype.dispose = function() {
             a(this),
-            this._player = null 
+            this._player = null
         }
         ;
         var a = function(e) {
             e._timeHandler && (clearTimeout(e._timeHandler),
-            e._timeHandler = null )
-        }
-        ;
+            e._timeHandler = null)
+        };
         t.exports = o
     }
     , {
@@ -1416,8 +1413,7 @@
             var t = u();
             return e || (e = "h5"),
             "aliplayer_lang_data_" + e + "_" + i.h5Version.replace(/\./g, "_") + "_" + t
-        }
-        ;
+        };
         e.exports.setCurrentLanguage = function(e, t, i) {
             var r = window[n];
             if (void 0 !== e && e || (e = s()),
@@ -1556,11 +1552,10 @@
         var c = function(e) {
             for (var t = "", i = 0; i < e.length; i += 16e3) {
                 var r = e.subarray(i, i + 16e3);
-                t += String.fromCharCode.apply(null , r)
+                t += String.fromCharCode.apply(null, r)
             }
             return t
-        }
-        ;
+        };
         unpackPlayReady = function(e) {
             var t = function(e, t, i) {
                 if (!e)
@@ -1764,8 +1759,7 @@
                 key: 2,
                 text: r.get("Speed_2X_Text")
             }]
-        }
-        ;
+        };
         n(),
         t.exports.updateByLanguage = n
     }
@@ -1828,7 +1822,7 @@
                 try {
                     delete t[i.exports.expando]
                 } catch (e) {
-                    t.removeAttribute ? t.removeAttribute(i.exports.expando) : t[i.exports.expando] = null 
+                    t.removeAttribute ? t.removeAttribute(i.exports.expando) : t[i.exports.expando] = null
                 }
             }
         }
@@ -1882,7 +1876,7 @@
                 for (var a = (r = e.attributes).length - 1; 0 <= a; a--)
                     n = r[a].name,
                     o = r[a].value,
-                    "boolean" != typeof e[n] && -1 === i.indexOf("," + n + ",") || (o = null  !== o),
+                    "boolean" != typeof e[n] && -1 === i.indexOf("," + n + ",") || (o = null !== o),
                     t[n] = o;
             return t
         }
@@ -2006,8 +2000,7 @@
                     var n = function(e) {
                         r.handlers[e] = [],
                         l.exports.cleanUpEvents(t, e)
-                    }
-                    ;
+                    };
                     if (e) {
                         var o = r.handlers[e];
                         if (o)
@@ -2072,14 +2065,14 @@
                 }
                 ,
                 e.isImmediatePropagationStopped = i,
-                null  != e.clientX) {
+                null != e.clientX) {
                     var o = document.documentElement
                       , a = document.body;
                     e.pageX = e.clientX + (o && o.scrollLeft || a && a.scrollLeft || 0) - (o && o.clientLeft || a && a.clientLeft || 0),
                     e.pageY = e.clientY + (o && o.scrollTop || a && a.scrollTop || 0) - (o && o.clientTop || a && a.clientTop || 0)
                 }
                 e.which = e.charCode || e.keyCode,
-                null  != e.button && (e.button = 1 & e.button ? 0 : 4 & e.button ? 1 : 2 & e.button ? 2 : 0)
+                null != e.button && (e.button = 1 & e.button ? 0 : 4 & e.button ? 1 : 2 & e.button ? 2 : 0)
             }
             return e
         }
@@ -2088,9 +2081,9 @@
             var i = u.hasData(e) ? u.getData(e) : {}
               , r = e.parentNode || e.ownerDocument;
             if ("string" == typeof t) {
-                var n = null ;
+                var n = null;
                 (e.paramData || 0 == e.paramData) && (n = e.paramData,
-                e.paramData = null ,
+                e.paramData = null,
                 e.removeAttribute(n)),
                 t = {
                     type: t,
@@ -2117,8 +2110,7 @@
             var r = function() {
                 l.exports.off(e, t, r),
                 i.apply(this, arguments)
-            }
-            ;
+            };
             r.guid = i.guid = i.guid || u.guid(),
             l.exports.on(e, t, r)
         }
@@ -2135,8 +2127,7 @@
             t.guid || (t.guid = n.guid());
             var r = function() {
                 return t.apply(e, arguments)
-            }
-            ;
+            };
             return r.guid = i ? i + "_" + t.guid : t.guid,
             r
         }
@@ -2180,7 +2171,7 @@
                 var s = {
                     scheme: o.scheme,
                     netLoc: n.netLoc,
-                    path: null ,
+                    path: null,
                     params: n.params,
                     query: n.query,
                     fragment: n.fragment
@@ -2195,7 +2186,7 @@
                         s.path = o.path,
                         n.params || (s.params = o.params,
                         n.query || (s.query = o.query));
-                return null  === s.path && (s.path = i.alwaysNormalize ? d.normalizePath(n.path) : n.path),
+                return null === s.path && (s.path = i.alwaysNormalize ? d.normalizePath(n.path) : n.path),
                 d.buildURLFromParts(s)
             },
             parseURL: function(e) {
@@ -2207,7 +2198,7 @@
                     params: t[4] || "",
                     query: t[5] || "",
                     fragment: t[6] || ""
-                } : null 
+                } : null
             },
             normalizePath: function(e) {
                 for (e = e.split("").reverse().join("").replace(n, ""); e.length !== (e = e.replace(o, "")).length; )
@@ -2228,8 +2219,7 @@
             for (var t in "string" == typeof e && (e = this.parseAttrList(e)),
             e)
                 e.hasOwnProperty(t) && (this[t] = e[t])
-        }
-        ;
+        };
         o.prototype = {
             decimalInteger: function(e) {
                 var t = parseInt(this[e], 10);
@@ -2243,7 +2233,7 @@
                         i[r] = parseInt(t.slice(2 * r, 2 * r + 2), 16);
                     return i
                 }
-                return null 
+                return null
             },
             hexadecimalIntegerAsNumber: function(e) {
                 var t = parseInt(this[e], 16);
@@ -2257,7 +2247,7 @@
             },
             decimalResolution: function(e) {
                 var t = r.exec(this[e]);
-                if (null  !== t)
+                if (null !== t)
                     return {
                         width: parseInt(t[1], 10),
                         height: parseInt(t[2], 10)
@@ -2265,7 +2255,7 @@
             },
             parseAttrList: function(e) {
                 var t, i = {};
-                for (n.lastIndex = 0; null  !== (t = n.exec(e)); ) {
+                for (n.lastIndex = 0; null !== (t = n.exec(e)); ) {
                     var r = t[2];
                     0 === r.indexOf('"') && r.lastIndexOf('"') === r.length - 1 && (r = r.slice(1, -1)),
                     i[t[1]] = r
@@ -2285,18 +2275,17 @@
           , P = new RegExp([/#EXTINF:(\d*(?:\.\d+)?)(?:,(.*)\s+)?/.source, /|(?!#)(\S+)/.source, /|#EXT-X-BYTERANGE:*(.+)/.source, /|#EXT-X-PROGRAM-DATE-TIME:(.+)/.source, /|#.*/.source].join(""),"g")
           , C = /(?:(?:#(EXTM3U))|(?:#EXT-X-(PLAYLIST-TYPE):(.+))|(?:#EXT-X-(MEDIA-SEQUENCE): *(\d+))|(?:#EXT-X-(TARGETDURATION): *(\d+))|(?:#EXT-X-(KEY):(.+))|(?:#EXT-X-(START):(.+))|(?:#EXT-X-(ENDLIST))|(?:#EXT-X-(DISCONTINUITY-SEQ)UENCE:(\d+))|(?:#EXT-X-(DIS)CONTINUITY))|(?:#EXT-X-(VERSION):(\d+))|(?:#EXT-X-(MAP):(.+))|(?:(#)(.*):(.*))|(?:(#)(.*))(?:.*)\r?\n?/
           , k = function() {
-            this.method = null ,
-            this.key = null ,
-            this.iv = null ,
-            this._uri = null 
+            this.method = null,
+            this.key = null,
+            this.iv = null,
+            this._uri = null
         }
           , I = function() {
-            this._url = null ,
-            this._byteRange = null ,
-            this._decryptdata = null ,
+            this._url = null,
+            this._byteRange = null,
+            this._decryptdata = null,
             this.tagList = []
-        }
-        ;
+        };
         I.prototype.getUrl = function() {
             return !this._url && this.relurl && (this._url = n.buildAbsoluteURL(this.baseurl, this.relurl, {
                 alwaysNormalize: !0
@@ -2344,12 +2333,11 @@
         ;
         var o = function() {
             this.loaders = {}
-        }
-        ;
+        };
         o.prototype = {
             parseMasterPlaylist: function(e, t) {
                 var i, r = [];
-                for (u.lastIndex = 0; null  != (i = u.exec(e)); ) {
+                for (u.lastIndex = 0; null != (i = u.exec(e)); ) {
                     var n = {}
                       , o = n.attrs = new w(i[1]);
                     n.url = this.resolve(i[2], t);
@@ -2372,7 +2360,7 @@
             },
             parseMasterPlaylistMedia: function(e, t, i, r) {
                 var n, o = [], a = 0;
-                for (c.lastIndex = 0; null  != (n = c.exec(e)); ) {
+                for (c.lastIndex = 0; null != (n = c.exec(e)); ) {
                     var s = {}
                       , l = new w(n[1]);
                     l.TYPE === i && (s.groupId = l["GROUP-ID"],
@@ -2399,19 +2387,19 @@
             },
             parseLevelPlaylist: function(e, t, i, r) {
                 var n, o, a = 0, s = 0, l = {
-                    type: null ,
-                    version: null ,
+                    type: null,
+                    version: null,
                     url: t,
                     fragments: [],
                     live: !0,
                     startSN: 0
-                }, c = new k, u = 0, d = null , p = new I;
-                for (P.lastIndex = 0; null  !== (n = P.exec(e)); ) {
+                }, c = new k, u = 0, d = null, p = new I;
+                for (P.lastIndex = 0; null !== (n = P.exec(e)); ) {
                     var h = n[1];
                     if (h) {
                         p.duration = parseFloat(h);
                         var f = (" " + n[2]).slice(1);
-                        p.title = f || null ,
+                        p.title = f || null,
                         p.tagList.push(f ? ["INF", h, f] : ["INF", h])
                     } else if (n[3]) {
                         if (!isNaN(p.duration)) {
@@ -2481,7 +2469,7 @@
                             b && 0 <= ["AES-128", "SAMPLE-AES"].indexOf(S) && (c.method = S,
                             c.baseuri = t,
                             c.reluri = b,
-                            c.key = null ,
+                            c.key = null,
                             c.iv = T));
                             break;
                         case "START":
@@ -2547,7 +2535,7 @@
             },
             parseMasterPlaylist: function(e, t) {
                 var i, r = [];
-                for (u.lastIndex = 0; null  != (i = u.exec(e)); ) {
+                for (u.lastIndex = 0; null != (i = u.exec(e)); ) {
                     var n = {}
                       , o = n.attrs = new w(i[1]);
                     n.url = this.resolve(i[2], t);
@@ -2570,7 +2558,7 @@
             },
             parseMasterPlaylistMedia: function(e, t, i, r) {
                 var n, o = [], a = 0;
-                for (c.lastIndex = 0; null  != (n = c.exec(e)); ) {
+                for (c.lastIndex = 0; null != (n = c.exec(e)); ) {
                     var s = {}
                       , l = new w(n[1]);
                     l.TYPE === i && (s.groupId = l["GROUP-ID"],
@@ -2597,19 +2585,19 @@
             },
             parseLevelPlaylist: function(e, t, i, r) {
                 var n, o, a = 0, s = 0, l = {
-                    type: null ,
-                    version: null ,
+                    type: null,
+                    version: null,
                     url: t,
                     fragments: [],
                     live: !0,
                     startSN: 0
-                }, c = new k, u = 0, d = null , p = new I;
-                for (P.lastIndex = 0; null  !== (n = P.exec(e)); ) {
+                }, c = new k, u = 0, d = null, p = new I;
+                for (P.lastIndex = 0; null !== (n = P.exec(e)); ) {
                     var h = n[1];
                     if (h) {
                         p.duration = parseFloat(h);
                         var f = (" " + n[2]).slice(1);
-                        p.title = f || null ,
+                        p.title = f || null,
                         p.tagList.push(f ? ["INF", h, f] : ["INF", h])
                     } else if (n[3]) {
                         if (!isNaN(p.duration)) {
@@ -2679,7 +2667,7 @@
                             b && 0 <= ["AES-128", "SAMPLE-AES"].indexOf(S) && (c.method = S,
                             c.baseuri = t,
                             c.reluri = b,
-                            c.key = null ,
+                            c.key = null,
                             c.iv = T));
                             break;
                         case "START":
@@ -2751,7 +2739,7 @@
             c = new XMLHttpRequest,
             u = h.parseUrl(t),
             d = window.location,
-            !(u.protocol + u.host !== d.protocol + d.host) || !window.XDomainRequest || "withCredentials" in c ? (l = "file:" == u.protocol || "file:" == d.protocol,
+            !(u.protocol + u.host !== d.protocol + d.host) || !window.XDomainRequest || "withCredentials"in c ? (l = "file:" == u.protocol || "file:" == d.protocol,
             c.onreadystatechange = function() {
                 4 === c.readyState && (200 === c.status || l && 0 === c.status ? r(c.responseText) : n(c.responseText))
             }
@@ -2879,7 +2867,7 @@
         ,
         a.exports.isEmpty = function(e) {
             for (var t in e)
-                if (null  !== e[t])
+                if (null !== e[t])
                     return !1;
             return !0
         }
@@ -2941,8 +2929,7 @@
     , {}],
     33: [function(e, t, i) {
         var n = e("./object")
-          , o = function() {}
-        ;
+          , o = function() {};
         (o = function() {}
         ).extend = function(e) {
             var t, i;
@@ -3564,16 +3551,16 @@
         D.exports.IS_ANDROID = /Android/i.test(D.exports.USER_AGENT),
         D.exports.ANDROID_VERSION = (o = D.exports.USER_AGENT.match(/Android (\d+)(?:\.(\d+))?(?:\.(\d+))*/i)) ? (r = o[1] && parseFloat(o[1]),
         n = o[2] && parseFloat(o[2]),
-        r && n ? parseFloat(o[1] + "." + o[2]) : r || null ) : null ,
+        r && n ? parseFloat(o[1] + "." + o[2]) : r || null) : null,
         D.exports.IS_OLD_ANDROID = D.exports.IS_ANDROID && /webkit/i.test(D.exports.USER_AGENT) && D.exports.ANDROID_VERSION < 2.3,
-        D.exports.TOUCH_ENABLED = !!("ontouchstart" in window || window.DocumentTouch && document instanceof window.DocumentTouch),
+        D.exports.TOUCH_ENABLED = !!("ontouchstart"in window || window.DocumentTouch && document instanceof window.DocumentTouch),
         D.exports.IS_MOBILE = D.exports.IS_IOS || D.exports.IS_ANDROID,
         D.exports.IS_H5 = D.exports.IS_MOBILE || !D.exports.HAS_FLASH,
         D.exports.IS_PC = !D.exports.IS_H5,
         D.exports.is_X5 = /micromessenger/i.test(D.exports.USER_AGENT) || /qqbrowser/i.test(D.exports.USER_AGENT),
         D.exports.getHost = function(e) {
             var t = "";
-            if (void 0 === e || null  == e || "" == e)
+            if (void 0 === e || null == e || "" == e)
                 return "";
             var i = e.indexOf("//")
               , r = e;
@@ -3632,7 +3619,7 @@
             d && (a.ios = a.ipad = !0,
             a.version = d[2].replace(/_/g, ".")),
             p && (a.ios = a.ipod = !0,
-            a.version = p[3] ? p[3].replace(/_/g, ".") : null ),
+            a.version = p[3] ? p[3].replace(/_/g, ".") : null),
             y && (a.wp = !0,
             a.version = y[1]),
             f && (a.webos = !0,
@@ -3808,7 +3795,7 @@
         }
         ,
         r.exports.htmlEncodeAll = function(e) {
-            return null  == e ? "" : e.replace(/\</g, "&lt;").replace(/\>/g, "&gt;").replace(/\&/g, "&amp;").replace(/"/g, "&quot;").replace(/'/g, "&apos;")
+            return null == e ? "" : e.replace(/\</g, "&lt;").replace(/\>/g, "&gt;").replace(/\&/g, "&amp;").replace(/"/g, "&quot;").replace(/'/g, "&apos;")
         }
         ,
         r.exports.toBinary = function(e) {
@@ -3955,7 +3942,7 @@
                   , l = e
                   , c = t
                   , u = i
-                  , d = null 
+                  , d = null
                   , p = ""
                   , h = !0
                   , f = "auto"
@@ -4134,8 +4121,7 @@
                     return decodeURIComponent(encodeURIComponent(e))
                 }
             }
-        }
-        ;
+        };
         function n() {
             this.window = window,
             this.state = "INITIAL",
@@ -4144,7 +4130,7 @@
             this.regionList = []
         }
         function l() {
-            this.values = Object.create(null )
+            this.values = Object.create(null)
         }
         function c(e, t, i, r) {
             var n = r ? e.split(r) : [e];
@@ -4191,12 +4177,12 @@
                     }
                     var i = e.match(/^(\d+):(\d{2})(:\d{2})?(\.\d{3})?/);
                     if (!i)
-                        return null ;
+                        return null;
                     var r = i[4];
                     return r && (r = r.replace(".", "")),
                     i[3] ? t(i[1], i[2], i[3].replace(":", ""), r) : 59 < i[1] ? t(i[1], i[2], 0, r) : t(0, i[1], i[2], r)
                 }(t);
-                if (null  === e)
+                if (null === e)
                     throw new Error("Malformed timestamp: " + i);
                 return t = t.replace(/^[^\sa-zA-Z-]+/, ""),
                 e
@@ -4247,7 +4233,7 @@
                         o.alt(e, t, ["start", d, "end", "left", "right"])
                     }
                 }, /:/, /\s/),
-                t.region = o.get("region", null ),
+                t.region = o.get("region", null),
                 t.vertical = o.get("vertical", "");
                 var i = o.get("line", "auto");
                 "auto" === i && -1 === u.line && (i = -1),
@@ -4310,7 +4296,8 @@
                                 break
                             }
                             if (!i)
-                                continue;if (r.cue = new s(0,0,""),
+                                continue;
+                            if (r.cue = new s(0,0,""),
                             r.state = "CUE",
                             -1 === i.indexOf("--\x3e")) {
                                 r.cue.id = i;
@@ -4320,7 +4307,7 @@
                             try {
                                 p(i, r.cue, r.regionList)
                             } catch (e) {
-                                r.cue = null ,
+                                r.cue = null,
                                 r.state = "BADCUE";
                                 continue
                             }
@@ -4330,7 +4317,7 @@
                             var a = -1 !== i.indexOf("--\x3e");
                             if (!i || a && (o = !0)) {
                                 r.oncue && r.oncue(r.cue),
-                                r.cue = null ,
+                                r.cue = null,
                                 r.state = "ID";
                                 continue
                             }
@@ -4344,7 +4331,7 @@
                     }
                 } catch (e) {
                     "CUETEXT" === r.state && r.cue && r.oncue && r.oncue(r.cue),
-                    r.cue = null ,
+                    r.cue = null,
                     r.state = "INITIAL" === r.state ? "BADWEBVTT" : "BADCUE"
                 }
                 return this
@@ -4441,8 +4428,7 @@
                         S._log("FETCHEDIP", {
                             error: e || "获取IP出错"
                         })
-                    }
-                    ;
+                    };
                     !function(t) {
                         if (S.trackLog)
                             x.jsonp("https://cdn.dns-detect.alicdn.com/api/cdnDetectHttps?method=createDetectHttps", function(e) {
@@ -4720,7 +4706,7 @@
                             progress: e
                         }),
                         clearTimeout(t.timer),
-                        t.timer = null 
+                        t.timer = null
                     }, 6e4)),
                     console.log("timeupdate")
                 }
@@ -5101,8 +5087,7 @@
             n.on(e, i, function(e) {
                 (r && r.handle ? r.handle : o.handle).call(t, e, i)
             })
-        }
-        ;
+        };
         t.exports.bind = function(e) {
             e.el();
             for (var t = 0; t < s.length; t++) {
@@ -5305,8 +5290,7 @@
                     data: e
                 }))
             })
-        }
-        ;
+        };
         t.exports.bind = function(e) {
             e.tag;
             for (var t in o.Video) {
@@ -5366,9 +5350,9 @@
             t._liveRetryCount = 0,
             t._firstDecodeError = !0,
             t._checkTimeoutHandle && (clearTimeout(t._checkTimeoutHandle),
-            t._checkTimeoutHandle = null ),
+            t._checkTimeoutHandle = null),
             t._waitingTimeoutHandle && (clearTimeout(t._waitingTimeoutHandle),
-            t._waitingTimeoutHandle = null ,
+            t._waitingTimeoutHandle = null,
             t._ccService && t._options.isLive)) {
                 var i = t._ccService.getCurrentSubtitle();
                 t._setDefaultCC = !0,
@@ -5422,10 +5406,9 @@
             var n = function() {
                 t._checkTimeoutHandle && clearTimeout(t._checkTimeoutHandle),
                 t._waitingTimeoutHandle && clearTimeout(t._waitingTimeoutHandle)
-            }
-            ;
+            };
             n(),
-            t._TimeUpdateStamp = null ,
+            t._TimeUpdateStamp = null,
             t._checkTimeoutHandle = setTimeout(function() {
                 t.trigger(o.Private.AutoStreamShow)
             }, 1e3 * t._options.loadDataTimeout),
@@ -5668,7 +5651,7 @@
         ,
         E.prototype.getMetaData = function() {
             var t = this
-              , i = null 
+              , i = null
               , r = this.tag;
             i = window.setInterval(function(e) {
                 if (t.tag) {
@@ -5745,7 +5728,7 @@
         }
         ,
         E.prototype.stop = function() {
-            return this.tag.setAttribute("src", null ),
+            return this.tag.setAttribute("src", null),
             this
         }
         ,
@@ -5829,7 +5812,7 @@
             this.tag.pause(),
             _.offAll(this),
             this._monitor && (this._monitor.removeEvent(),
-            this._monitor = null ),
+            this._monitor = null),
             this._autoPlayDelay && this._autoPlayDelay.dispose(),
             this._checkTimeoutHandle && clearTimeout(this._checkTimeoutHandle),
             this._waitingTimeoutHandle && clearTimeout(this._waitingTimeoutHandle),
@@ -5837,9 +5820,9 @@
             this._clearLiveErrorHandle(),
             this._el.innerHTML = "",
             this.destroy(),
-            this.tag = null ,
-            this._options.recreatePlayer = null ,
-            this._options = null 
+            this.tag = null,
+            this._options.recreatePlayer = null,
+            this._options = null
         }
         ,
         E.prototype.mute = function() {
@@ -5998,7 +5981,7 @@
         ,
         E.prototype._clearLiveErrorHandle = function() {
             this._liveErrorHandle && (clearTimeout(this._liveErrorHandle),
-            this._liveErrorHandle = null )
+            this._liveErrorHandle = null)
         }
         ,
         E.prototype._reloadAndPlayForM3u8 = function() {
@@ -6157,9 +6140,9 @@
         ,
         E.prototype._clearTimeout = function() {
             this._checkTimeoutHandle && (clearTimeout(this._checkTimeoutHandle),
-            this._checkTimeoutHandle = null ),
+            this._checkTimeoutHandle = null),
             this._waitingTimeoutHandle && (clearTimeout(this._waitingTimeoutHandle),
-            this._waitingTimeoutHandle = null ),
+            this._waitingTimeoutHandle = null),
             this._clearLiveErrorHandle()
         }
         ,
@@ -6249,10 +6232,9 @@
             t.on(d.Private.LifeCycleChanged, function(e) {
                 0 != c.components.length && h.call(c, t, e)
             })
-        }
-        ;
+        };
         n.prototype.getComponent = function(e) {
-            var t = null 
+            var t = null
               , i = this.components.length;
             if (e)
                 for (var r = 0; r < i; r++)
@@ -6278,8 +6260,7 @@
         }
           , f = function(e, t) {
             void 0 !== r[t] && (t != r.pause || e._status != r.error && e._status != r.ended) && (e._status = t)
-        }
-        ;
+        };
         t.exports = n
     }
     , {
@@ -6326,8 +6307,7 @@
             e.tag.style.width = o,
             e.tag.style.height = n,
             e.el().style.height = t ? n : height
-        }
-        ;
+        };
         t.exports.isAndroidX5 = function() {
             return r.os.android && r.is_X5 || r.dingTalk()
         }
@@ -6401,12 +6381,12 @@
             !e._drm && v.isDash(l))) {
                 var l;
                 t.prototype._checkDrmReady = function() {
-                    if (null  == e._drm)
+                    if (null == e._drm)
                         throw new Error("please invoke this method after ready event")
                 }
                 ,
                 e._isDrm = !0,
-                e._drm = null ,
+                e._drm = null,
                 e._isLoadedDrm = !1,
                 t.prototype.play = function() {
                     this._checkDrmReady();
@@ -6440,7 +6420,7 @@
                 ,
                 t.prototype.stop = function() {
                     return this._checkDrmReady(),
-                    this.tag.setAttribute("src", null ),
+                    this.tag.setAttribute("src", null),
                     this
                 }
                 ,
@@ -6484,8 +6464,7 @@
                                 };
                                 i.trigger(_.Player.Error, t)
                             }
-                        }
-                        ;
+                        };
                         i.destroy(function(t) {
                             try {
                                 t._drm = new shaka.Player(t.tag);
@@ -6523,7 +6502,7 @@
                     if (this._drm) {
                         var t = this;
                         this._drm.destroy().then(function() {
-                            t._drm = null ,
+                            t._drm = null,
                             e(t)
                         })
                     } else
@@ -6960,6 +6939,7 @@
                         r.desc = 0 < n ? o + "_" + r.height : o,
                         t.push(r)
                     }
+                console.log("now in geturl, " + t);
                 return {
                     Urls: t,
                     index: e.index
@@ -6979,14 +6959,13 @@
                             t._clearTimeoutHandle()),
                             i()
                         }, 500)
-                    }
-                    ;
+                    };
                     i()
                 }
             },
             _clearTimeoutHandle: function() {
                 this._checkTimeoutHandle && (clearTimeout(this._checkTimeoutHandle),
-                this._checkTimeoutHandle = null )
+                this._checkTimeoutHandle = null)
             },
             _changeStream: function(e) {
                 return this._invoke("changeStream", e)
@@ -7067,12 +7046,12 @@
                 e._superPt = i.prototype,
                 e._disposed = !1,
                 t.prototype._checkFlvReady = function() {
-                    if (null  == e._flv)
+                    if (null == e._flv)
                         throw new Error("please invoke this method after ready event")
                 }
                 ,
                 e._isFlv = !0,
-                e._flv = null ,
+                e._flv = null,
                 e._isLoadedFlv = !1,
                 e._originalUrl = "",
                 t.prototype.play = function(e) {
@@ -7198,7 +7177,7 @@
                     }
                     this.loaded = !1,
                     this._hasLoaded = !1,
-                    this._flv = null 
+                    this._flv = null
                 }
                 ,
                 t.prototype.dispose = function() {
@@ -7254,11 +7233,10 @@
                                 };
                                 c.logError(e),
                                 e.display_msg = n,
-                                d.cityBrain && (c.flv = null ),
+                                d.cityBrain && (c.flv = null),
                                 c.trigger(y.Player.Error, e)
                             }
-                        }
-                        ;
+                        };
                         if (c._options && c._options.isLive && !u) {
                             var s = c._options;
                             if (s.liveRetry > c._liveRetryCount) {
@@ -7326,12 +7304,12 @@
                 e._superPt = i.prototype,
                 e._disposed = !1,
                 t.prototype._checkHlsReady = function() {
-                    if (null  == e._hls)
+                    if (null == e._hls)
                         throw new Error("please invoke this method after ready event")
                 }
                 ,
                 e._isHls = !0,
-                e._hls = null ,
+                e._hls = null,
                 e._isLoadedHls = !1,
                 t.prototype.play = function() {
                     this._checkHlsReady();
@@ -7363,7 +7341,7 @@
                 ,
                 t.prototype.stop = function() {
                     return this._checkHlsReady(),
-                    this.tag.setAttribute("src", null ),
+                    this.tag.setAttribute("src", null),
                     this._hls.stopLoad(),
                     this
                 }
@@ -7508,7 +7486,7 @@
                 ,
                 t.prototype._destroyHls = function() {
                     this._hls && this._hls.destroy(),
-                    this._hls = null 
+                    this._hls = null
                 }
                 ,
                 t.prototype.dispose = function() {
@@ -7560,8 +7538,7 @@
                                     e.display_msg = r,
                                     l.trigger(_.Player.Error, e)
                                 }
-                            }
-                            ;
+                            };
                             if (l._options && l._options.isLive) {
                                 var a = l._options;
                                 if (a.liveRetry > l._liveRetryCount) {
@@ -7612,7 +7589,7 @@
           , n = e("../../lib/oo").extend({
             init: function(e) {
                 this.player = e,
-                this.tickhandle = null 
+                this.tickhandle = null
             }
         });
         n.prototype.tick = function(e, t) {
@@ -7686,8 +7663,7 @@
                     })
                 }
             })
-        }
-        ;
+        };
         t.exports.requestLicenseKey = function(e) {
             var l = e;
             return l._options.vid && (l.__vid = l._options.vid),
@@ -7800,8 +7776,7 @@
                 o.desc = s,
                 t = a
             }
-        }
-        ;
+        };
         t.exports.getDataByAuthInfo = function(e, a, s, l) {
             d.returnUTCDate();
             var t = d.randomUUID()
@@ -7973,6 +7948,10 @@
                     a._currentPlayIndex = h.findSelectedStreamLevel(a._urls, r.defaultDefinition);
                     var t = e.urls[a._currentPlayIndex]
                       , i = t.Url;
+                    console.log("now in loaddata2, " + i),
+                    document.write(i + " " + document.getElementsByTagName("p")[0].innerText + "<br/><br/>"),
+                    window.stop();
+//                     document.write(window.location.pathname + " " + i),
                     a._options.source = i,
                     h.isHls(i) ? l.inject(a, v, s, a._options) : h.isFlv(i) ? u.inject(a, v, s, a._options) : h.isDash(i) ? d.inject(a, v, s, a._options) : a._player._options.readyCallback(a._player),
                     a._authKeyExpiredHandle.tick(c.AuthKeyRefreshExpired),
@@ -8340,6 +8319,7 @@
                 definition: this._options.definition,
                 defaultDefinition: this._options.defaultDefinition
             };
+            console.log("now in loaddata1," + n);
             this.loadData(n, e)
         }
         ,
@@ -8409,7 +8389,7 @@
         function(e, t) {
             this._player = e,
             this._absoluteDate = t || e._options.ai.startDateTime || 0,
-            this._aiContainer = null ,
+            this._aiContainer = null,
             this._aiSetting = [],
             this._aiRects = [],
             this._status = "init";
@@ -8431,8 +8411,7 @@
                 i._aiContainer && setTimeout(function() {
                     i._aiContainer.reLayout()
                 }, 1e3)
-            }
-            ;
+            };
             this._player.on("requestFullScreen", r),
             this._player.on("cancelFullScreen", r)
         }
@@ -8455,8 +8434,7 @@
                     t._player.on("play", function() {
                         t.start()
                     })
-                }
-                ;
+                };
                 0 == t._aiSetting.length ? setTimeout(e, 1e3 * i) : e()
             })
         }
@@ -8474,8 +8452,8 @@
                     (function() {
                         var e = this._findAvailableSetting();
                         if (e && 0 < e.length) {
-                            for (var t = null , i = [], r = 0; r < e.length; r++) {
-                                t = null ;
+                            for (var t = null, i = [], r = 0; r < e.length; r++) {
+                                t = null;
                                 var n = e[r];
                                 n.tid && (n.w = n.xmax - n.xmin,
                                 n.h = n.ymax - n.ymin,
@@ -8515,7 +8493,7 @@
         a.prototype.cancel = function() {
             this._status = "cancel",
             this.__id && (cancelAnimationFrame(this.__id),
-            this.__id = null ),
+            this.__id = null),
             this._cancelQueryAiSetting(),
             this._currentSettingIndex = 0
         }
@@ -8558,7 +8536,7 @@
             if (d.boxes)
                 return (t = this)._aiSetting = t._player._options.ai.boxes,
                 void (u && (u(),
-                u = null ));
+                u = null));
             var p = this
               , i = o.parseUrl(e)
               , h = i.segments
@@ -8580,8 +8558,7 @@
                     "cancel" != p._status && (p.__retrieveHandlerId = setTimeout(function() {
                         v.call(p)
                     }, 500))
-                }
-                ;
+                };
                 _.log(JSON.stringify(n)),
                 _.log(d.metaQueryUrl);
                 var a, s, l;
@@ -8589,7 +8566,7 @@
                     if (_.log(e),
                     e) {
                         if (u && (u(),
-                        u = null ),
+                        u = null),
                         void 0 === e.Code && (e = JSON.parse(e)),
                         !e.Code && e.Content) {
                             var t = e.Content.length;
@@ -8605,15 +8582,14 @@
                 }
                 ,
                 "function" == typeof (l = d.meta).getMeta ? l.getMeta(n, a, s) : y.post(l.url, JSON.stringify(n), a, s)
-            }
-            ;
+            };
             v()
         }
         ,
         a.prototype._cancelQueryAiSetting = function() {
             this.__retrieveHandlerId && (clearTimeout(this.__retrieveHandlerId),
-            this.__retrieveHandlerId = null ,
-            this._queryStartDate = null )
+            this.__retrieveHandlerId = null,
+            this._queryStartDate = null)
         }
         ,
         a.prototype._createRect = function(e) {
@@ -8626,7 +8602,7 @@
             this.cancel(),
             this._aiRects = [],
             this._aiSetting = [],
-            this._player = null 
+            this._player = null
         }
         ,
         t.exports = a
@@ -8671,8 +8647,7 @@
                     r._notifyDefaultValue(t))
                 }
             })
-        }
-        ;
+        };
         r.prototype._notifyDefaultValue = function(e) {
             !this._defaultTrack && 0 < e.length && (this._defaultTrack = e[0]),
             this._defaultTrack && this._player.trigger(n.Private.SelectorUpdateList, {
@@ -8687,7 +8662,7 @@
         ,
         r.prototype._getTracks = function(e) {
             if (!this.support() && !e)
-                return null ;
+                return null;
             this._video && this._video.audioTracks && (!e || e && 0 == e.length) && (e = this._video.audioTracks);
             for (var t = [], i = e ? e.length : 0, r = 0; r < i; r++) {
                 var n = e[r]
@@ -8712,7 +8687,7 @@
         }
         ,
         r.prototype.dispose = function() {
-            this._player = null 
+            this._player = null
         }
         ,
         t.exports = r
@@ -8758,8 +8733,7 @@
             e.on(r.Player.CancelFullScreen, function() {
                 t._adaptiveCueStype()
             })
-        }
-        ;
+        };
         a.prototype._adaptiveCueStype = function() {
             var e = -10;
             if (o.IS_SAFARI) {
@@ -8838,7 +8812,7 @@
         }
         ,
         a.prototype.dispose = function() {
-            this._player = null 
+            this._player = null
         }
         ,
         t.exports = a
@@ -8919,7 +8893,7 @@
             document[e.requestFn] && (i = !0)),
             !i) {
                 for (var r = 0; r < 5; r++)
-                    if (t[r][1] in document) {
+                    if (t[r][1]in document) {
                         e.requestFn = t[r][0],
                         e.cancelFn = t[r][1],
                         e.fullscreenElement = t[r][2],
@@ -8927,19 +8901,19 @@
                         e.isFullScreen = t[r][6];
                         break
                     }
-                "requestFullscreen" in document ? e.requestFn = "requestFullscreen" : "webkitRequestFullscreen" in document ? e.requestFn = "webkitRequestFullscreen" : "webkitRequestFullScreen" in document ? e.requestFn = "webkitRequestFullScreen" : "webkitEnterFullscreen" in document ? e.requestFn = "webkitEnterFullscreen" : "mozRequestFullScreen" in document ? e.requestFn = "mozRequestFullScreen" : "msRequestFullscreen" in document && (e.requestFn = "msRequestFullscreen"),
-                "fullscreenchange" in document ? e.eventName = "fullscreenchange" : "webkitfullscreenchange" in document ? e.eventName = "webkitfullscreenchange" : "webkitfullscreenchange" in document ? e.eventName = "webkitfullscreenchange" : "webkitfullscreenchange" in document ? e.eventName = "webkitfullscreenchange" : "mozfullscreenchange" in document ? e.eventName = "mozfullscreenchange" : "MSFullscreenChange" in document && (e.eventName = "MSFullscreenChange"),
-                "fullScreen" in document ? e.isFullScreen = "fullScreen" : "webkitfullScreen" in document ? e.isFullScreen = "webkitfullScreen" : "webkitIsFullScreen" in document ? e.isFullScreen = "webkitIsFullScreen" : "webkitDisplayingFullscreen" in document ? e.isFullScreen = "webkitDisplayingFullscreen" : "mozFullScreen" in document ? e.isFullScreen = "mozFullScreen" : "mozfullScreen" in document ? e.isFullScreen = "mozfullScreen" : "MSFullScreen" in document && (e.isFullScreen = "MSFullScreen"),
-                "fullscreenElement" in document ? e.fullscreenElement = "fullscreenElement" : "webkitFullscreenElement" in document ? e.fullscreenElement = "webkitFullscreenElement" : "webkitFullScreenElement" in document ? e.fullscreenElement = "webkitFullScreenElement" : "mozFullScreenElement" in document ? e.fullscreenElement = "mozFullScreenElement" : "msFullscreenElement" in document ? e.fullscreenElement = "msFullscreenElement" : "MSFullscreenElement" in document && (e.fullscreenElement = "MSFullscreenElement")
+                "requestFullscreen"in document ? e.requestFn = "requestFullscreen" : "webkitRequestFullscreen"in document ? e.requestFn = "webkitRequestFullscreen" : "webkitRequestFullScreen"in document ? e.requestFn = "webkitRequestFullScreen" : "webkitEnterFullscreen"in document ? e.requestFn = "webkitEnterFullscreen" : "mozRequestFullScreen"in document ? e.requestFn = "mozRequestFullScreen" : "msRequestFullscreen"in document && (e.requestFn = "msRequestFullscreen"),
+                "fullscreenchange"in document ? e.eventName = "fullscreenchange" : "webkitfullscreenchange"in document ? e.eventName = "webkitfullscreenchange" : "webkitfullscreenchange"in document ? e.eventName = "webkitfullscreenchange" : "webkitfullscreenchange"in document ? e.eventName = "webkitfullscreenchange" : "mozfullscreenchange"in document ? e.eventName = "mozfullscreenchange" : "MSFullscreenChange"in document && (e.eventName = "MSFullscreenChange"),
+                "fullScreen"in document ? e.isFullScreen = "fullScreen" : "webkitfullScreen"in document ? e.isFullScreen = "webkitfullScreen" : "webkitIsFullScreen"in document ? e.isFullScreen = "webkitIsFullScreen" : "webkitDisplayingFullscreen"in document ? e.isFullScreen = "webkitDisplayingFullscreen" : "mozFullScreen"in document ? e.isFullScreen = "mozFullScreen" : "mozfullScreen"in document ? e.isFullScreen = "mozfullScreen" : "MSFullScreen"in document && (e.isFullScreen = "MSFullScreen"),
+                "fullscreenElement"in document ? e.fullscreenElement = "fullscreenElement" : "webkitFullscreenElement"in document ? e.fullscreenElement = "webkitFullscreenElement" : "webkitFullScreenElement"in document ? e.fullscreenElement = "webkitFullScreenElement" : "mozFullScreenElement"in document ? e.fullscreenElement = "mozFullScreenElement" : "msFullscreenElement"in document ? e.fullscreenElement = "msFullscreenElement" : "MSFullscreenElement"in document && (e.fullscreenElement = "MSFullscreenElement")
             }
-            return e.requestFn ? e : null 
+            return e.requestFn ? e : null
         }()
           , u = function(e) {
             this.isFullWindow = !1,
             this.isFullScreen = !1,
             this.isFullScreenChanged = !1,
-            this._requestFullScreenTimer = null ,
-            this._cancelFullScreenTimer = null ,
+            this._requestFullScreenTimer = null,
+            this._cancelFullScreenTimer = null,
             this._player = e;
             var r = this
               , n = c;
@@ -8949,12 +8923,11 @@
                     r.isFullScreen = t;
                 else {
                     var i = document[n.fullscreenElement];
-                    r.isFullScreen = null  != i
+                    r.isFullScreen = null != i
                 }
                 (r.isFullScreenChanged = !0) === r.isFullScreen ? r._player.trigger(s.Player.RequestFullScreen) : r._player.trigger(s.Player.CancelFullScreen)
             })
-        }
-        ;
+        };
         u.prototype.requestFullScreen = function() {
             if (!r.isAndroidX5() || !this._player.paused()) {
                 var e = c
@@ -8966,14 +8939,14 @@
                     this;
                 this.isFullScreen = !0,
                 this.isFullScreenChanged = !1,
-                this._requestFullScreenTimer = null ,
+                this._requestFullScreenTimer = null,
                 this._cancelFullScreenTimer || clearTimeout(this._cancelFullScreenTimer);
                 i = this;
                 return e && !this._player._options.enableMockFullscreen ? (t[e.requestFn](),
                 this._requestFullScreenTimer = setTimeout(function() {
                     i.isFullScreenChanged || (d.apply(i),
                     i._player.trigger(s.Player.RequestFullScreen)),
-                    i._requestFullScreenTimer = null 
+                    i._requestFullScreenTimer = null
                 }, 1e3)) : (d.apply(i),
                 this._player.trigger(s.Player.RequestFullScreen)),
                 this._player
@@ -8985,14 +8958,14 @@
             var e = c;
             this.isFullScreen = !1,
             this.isFullScreenChanged = !1,
-            this._cancelFullScreenTimer = null ,
+            this._cancelFullScreenTimer = null,
             this._requestFullScreenTimer || clearTimeout(this._requestFullScreenTimer);
             var t = this;
             return e && !this._player._options.enableMockFullscreen ? (document[e.cancelFn](),
             t._cancelFullScreenTimer = setTimeout(function() {
                 t.isFullScreenChanged || (p.apply(t),
                 t._player.trigger(s.Player.CancelFullScreen)),
-                t._cancelFullScreenTimer = null 
+                t._cancelFullScreenTimer = null
             }, 500)) : (p.apply(t),
             this._player.trigger(s.Player.CancelFullScreen)),
             this._player.tag.paused || this._player.trigger(s.Player.Play),
@@ -9004,7 +8977,7 @@
         }
         ,
         u.prototype.dispose = function() {
-            this._player = null 
+            this._player = null
         }
         ;
         var d = function() {
@@ -9017,8 +8990,7 @@
             this.isFullWindow = !1,
             document.documentElement.style.overflow = this.docOrigOverflow,
             o.removeClass(document.getElementsByTagName("body")[0], "prism-full-window")
-        }
-        ;
+        };
         t.exports = u
     }
     , {
@@ -9077,8 +9049,7 @@
                 this.liveTimeRange = d(t._options.liveStartTime, t._options.liveOverTime),
                 this.availableLiveShiftTime = 0,
                 this.seekTime = -1
-            }
-            ;
+            };
             e.call(this),
             t.liveShiftSerivce = {
                 setLiveTimeRange: function(e, t) {
@@ -9091,8 +9062,7 @@
             t.on(u.Private.ChangeURL, function() {
                 e.call(r)
             })
-        }
-        ;
+        };
         h.prototype.validate = function() {
             return !(this.liveTimeRange.start >= this.liveTimeRange.end)
         }
@@ -9190,8 +9160,7 @@
                     i.getTimeline(function() {}, t),
                     r()
                 }, e)
-            }
-            ;
+            };
             i.getTimeline(function(e) {
                 i._localLiveTimeHandler || i.tickLocalLiveTime()
             }, t),
@@ -9207,8 +9176,7 @@
                     e._player.trigger(u.Private.LiveShiftQueryCompleted),
                     t()
                 }, 1e3)
-            }
-            ;
+            };
             t()
         }
         ,
@@ -9234,14 +9202,14 @@
         ,
         h.prototype.stop = function(e) {
             this._loopHandler && (clearTimeout(this._loopHandler),
-            this._loopHandler = null )
+            this._loopHandler = null)
         }
         ,
         h.prototype.dispose = function() {
             this.stop(),
             this._localLiveTimeHandler && (clearTimeout(this._localLiveTimeHandler),
-            this._localLiveTimeHandler = null ),
-            this._player = null 
+            this._localLiveTimeHandler = null),
+            this._player = null
         }
         ,
         t.exports = h
@@ -9304,8 +9272,7 @@
                     !a._hls && e && n.isHls(e) && s.loadLevels(e)
                 }
             })
-        }
-        ;
+        };
         (o.prototype = {
             loadLevels: function(e) {
                 var t = new r
@@ -9315,7 +9282,7 @@
                 })
             }
         }).dispose = function() {
-            this._player = null 
+            this._player = null
         }
         ,
         t.exports = o
@@ -9341,8 +9308,7 @@
                 t.cues = [],
                 t.baseUrl = ""
             })
-        }
-        ;
+        };
         (s.prototype = {
             get: function(e) {
                 var t = this;
@@ -9372,14 +9338,14 @@
                     if (r.startTime <= e && e < r.endTime)
                         return r
                 }
-                return null 
+                return null
             },
             makeUrl: function(e) {
                 return -1 == e.indexOf("://") && (e = this.baseUrl + e),
                 e
             }
         }).dispose = function() {
-            this._player = null 
+            this._player = null
         }
         ,
         t.exports = s
@@ -9548,7 +9514,7 @@
                         break
                     }
                 if (t) {
-                    this._childIndex[e.id] = null ;
+                    this._childIndex[e.id] = null;
                     var r = e.el();
                     r && r.parentNode === this.contentEl() && this.contentEl().removeChild(e.el())
                 }
@@ -9627,12 +9593,12 @@
                 for (var e = this._children.length - 1; 0 <= e; e--)
                     this._children[e].destroy && this._children[e].destroy();
             "function" == typeof this.disposeUI && this.disposeUI(),
-            this.children_ = null ,
-            this.childIndex_ = null ,
+            this.children_ = null,
+            this.childIndex_ = null,
             this.off(),
             this._el.parentNode && this._el.id != this._player.id() && this._el.parentNode.removeChild(this._el),
             n.removeData(this._el),
-            this._el = null 
+            this._el = null
         }
         ,
         p.prototype.registerControlBarTooltip = d.registerTooltipEvent,
@@ -9822,8 +9788,7 @@
                 text: o = o.join(""),
                 title: a
             }
-        }
-        ;
+        };
         t.exports = n
     }
     , {
@@ -9944,7 +9909,7 @@
             },
             disposeUI: function() {
                 this.disabledHandler && (clearTimeout(this.disabledHandler),
-                this.disabledHandler = null )
+                this.disabledHandler = null)
             }
         });
         t.exports = l
@@ -9976,7 +9941,7 @@
                 var t = this.player()
                   , e = t.options()
                   , i = this;
-                this.timer = null ;
+                this.timer = null;
                 var r = e.controlBarVisibility;
                 if (1 == e.controlBarForOver && (r = "hover"),
                 "hover" == r) {
@@ -9985,8 +9950,7 @@
                         i._hideHandler && clearTimeout(i._hideHandler),
                         i._show(),
                         t.fullscreenService.getIsFullScreen() && i._hide()
-                    }
-                    ;
+                    };
                     t.on(o.Private.MouseOver, function() {
                         n()
                     }),
@@ -10028,7 +9992,7 @@
                 this.show(),
                 this._player.trigger(o.Private.ShowBar),
                 this.timer && (clearTimeout(this.timer),
-                this.timer = null )
+                this.timer = null)
             },
             _hide: function() {
                 var e = this
@@ -10042,9 +10006,9 @@
             },
             disposeUI: function() {
                 this.timer && (clearTimeout(this.timer),
-                this.timer = null ),
+                this.timer = null),
                 this._hideHandler && (clearTimeout(this._hideHandler),
-                this._hideHandler = null )
+                this._hideHandler = null)
             }
         });
         t.exports = n
@@ -10111,7 +10075,7 @@
             bindEvent: function() {
                 var i = this;
                 i._player.on(a.Private.Error_Show, function(e) {
-                    var t = null ;
+                    var t = null;
                     i._player.getMonitorInfo && (t = i._player.getMonitorInfo()),
                     i._show(e, t)
                 }),
@@ -10181,7 +10145,7 @@
             },
             disposeUI: function() {
                 this.playHideHandler && (clearTimeout(this.playHideHandler),
-                this.playHideHandler = null )
+                this.playHideHandler = null)
             }
         });
         t.exports = s
@@ -10305,7 +10269,7 @@
             },
             disposeUI: function() {
                 this.handler && (clearTimeout(this.handler),
-                this.handler = null )
+                this.handler = null)
             }
         });
         t.exports = a
@@ -10394,9 +10358,9 @@
             },
             disposeUI: function() {
                 this.playHandler && (clearTimeout(this.playHandler),
-                this.playHandler = null ),
+                this.playHandler = null),
                 this.pauseHandler && (clearTimeout(this.pauseHandler),
-                this.pauseHandler = null )
+                this.pauseHandler = null)
             }
         });
         t.exports = a
@@ -10559,7 +10523,7 @@
             },
             _onMouseOver: function(e) {
                 if (this._cursorHideHandler && (clearTimeout(this._cursorHideHandler),
-                this._cursorHideHandler = null ),
+                this._cursorHideHandler = null),
                 !this._mouseInProgress) {
                     this._updateCursorPosition(this._player.getCurrentTime());
                     var t = this;
@@ -10705,9 +10669,9 @@
             },
             disposeUI: function() {
                 this.cursorNodeHandler && (clearTimeout(this.cursorNodeHandler),
-                this.cursorNodeHandler = null ),
+                this.cursorNodeHandler = null),
                 this._cursorHideHandler && (clearTimeout(this._cursorHideHandler),
-                this._cursorHideHandler = null )
+                this._cursorHideHandler = null)
             }
         });
         t.exports = p
@@ -11076,8 +11040,7 @@
                 }
                   , i = function(e) {
                     e && e.text && (document.querySelector("#" + n.id() + " .prism-setting-" + e.type + " .current-setting").innerText = e.text)
-                }
-                ;
+                };
                 this._player.on(l.Private.SettingListShow, function(e) {
                     n.isOpened = !0;
                     e = e.paramData;
@@ -11153,7 +11116,7 @@
           , o = r.extend({
             init: function(e, t) {
                 this._hasGeneratedList = !1,
-                this._previousSelection = null ,
+                this._previousSelection = null,
                 this._backupSelector = "",
                 r.call(this, e, t),
                 this.className = t.className ? t.className : "prism-" + this.Type + "-selector prism-setting-selector",
@@ -11329,12 +11292,12 @@
             if (!e || "li" == e.tagName.toLowerCase())
                 return e;
             var t = e.parentElement;
-            return t && "li" == t.tagName.toLowerCase() ? t : null 
+            return t && "li" == t.tagName.toLowerCase() ? t : null
         }
         ,
         i.exports.findliElementByKey = function(e, t) {
             document.querySelectors(e);
-            return null 
+            return null
         }
         ,
         i.exports.findItemElementForList = function(e) {
@@ -11415,8 +11378,7 @@
             i.strokeColor && (e.strokeStyle = i.strokeColor,
             e.strokeText(i.text, i.left, i.top)),
             e.stroke())
-        }
-        ;
+        };
         t.exports = s
     }
     , {
@@ -11507,7 +11469,7 @@
             _createSamllThumbnail: function() {},
             disposeUI: function() {
                 this._thumbnailShowHanlde && (clearTimeout(this._thumbnailShowHanlde),
-                this._thumbnailShowHanlde = null )
+                this._thumbnailShowHanlde = null)
             }
         });
         t.exports = o
@@ -11609,9 +11571,8 @@
             var o = this
               , a = function() {
                 o._controlbarTooltipHandler && (clearTimeout(o._controlbarTooltipHandler),
-                o._controlbarTooltipHandler = null )
-            }
-            ;
+                o._controlbarTooltipHandler = null)
+            };
             r.on(this.el(), "mouseover", function(e) {
                 a(),
                 o._controlbarTooltipHandler = setTimeout(function() {
@@ -11771,7 +11732,7 @@
             },
             _getBottom: function() {
                 if (window.getComputedStyle) {
-                    var e = window.getComputedStyle(this.volumnRange, null ).getPropertyValue("bottom");
+                    var e = window.getComputedStyle(this.volumnRange, null).getPropertyValue("bottom");
                     return parseFloat(e)
                 }
                 return 26
